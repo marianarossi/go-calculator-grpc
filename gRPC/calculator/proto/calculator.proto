@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "/calculator";
+
+service Calculator {
+    rpc Add (AddRequest) returns (Response);
+    rpc Subtract (SubtractRequest) returns (Response);
+    rpc Multiply (MultiplyRequest) returns (Response);
+    rpc Divide (DivideRequest) returns (Response);
+}
+
+message AddRequest {
+    double Num1 = 1;
+    double Num2 = 2;
+}
+
+message SubtractRequest {
+    double Num1 = 1;
+    double Num2 = 2;
+}
+
+message MultiplyRequest {
+    double Num1 = 1;
+    double Num2 = 2;
+}
+
+message DivideRequest {
+    double Num1 = 1;
+    double Num2 = 2;
+}
+
+message Response {
+    double Response = 1;
+}
